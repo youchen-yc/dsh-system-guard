@@ -51,10 +51,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/youchen-yc/dsh-system-guard.git"
+    "url": "git+https://github.com/youchen-yc/dsh-system-guard.git"
   },
-  "homepage": "https://gitee.com/youchen-yc/dsh-system-guard#readme",
+  "homepage": "https://github.com/youchen-yc/dsh-system-guard#readme",
   "bugs": {
-    "url": "https://gitee.com/youchen-yc/dsh-system-guard/issues"
+    "url": "https://github.com/youchen-yc/dsh-system-guard/issues"
   }
 }

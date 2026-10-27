@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sealedAt": "2026-10-27T14:30:57.590Z",
+  "sealedAt": "2026-10-27T14:35:13.459Z",
   "files": {
     "client.js": "583ac833ef1af7dad81d16de3dbd36bf110297f3363b0b21176cc305947c010e",
     "index.js": "9d07d2612ead1a7006d8b940fe1cb2d4eceeb2dc9a277f987dfac1e2aa3008e8",
@@ -15,7 +15,7 @@
     "lib/win-backend.js": "a2c7e82fa2e9de61e2abf8c0aa9a75fbb8f249e4c36209c62c791173976a2e59",
     "locale/en.json": "f8a2dd0d816208e9de51f200e2705e71d976276b7df3edcd80632fb77fb5fdce",
     "locale/zh.json": "4f5908e12533a5852e9ca71d72d238b142d89a6a251236a3fa126e609cfeb90e",
-    "package.json": "23cc772635cba217a7074e30b435193c94962473f08081ec678a015ab090c448",
+    "package.json": "73d526ed3cd2718dab7fb21c675a6bf2ef09bab2606ecb889a78f006326df40c",
     "scripts/guard.ps1": "e646467f883d8ce0508c35a353f44b26ed0a20ff917f8f1d34233473a6907be1",
     "scripts/seal.mjs": "c8570e9050ee94be312d50edacffca0d1196748cdbb4faff5dfd135813849c5b"
   }
