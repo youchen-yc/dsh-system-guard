@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "System Guard · System File Protection",
+    "description": "Inspects the system's core files and classifies system junk, keeps a hidden backup of core files, patrols their integrity, restores missing or changed files from backup, and checks system file versions against official release information. The guard privilege is only ever used to protect this machine; it cannot be used for anything else."
+  }
+}

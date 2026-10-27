@@ -1,0 +1,60 @@
+{
+  "name": "dsh-system-guard",
+  "version": "1.0.0",
+  "description": "系统守护：分析并分类系统核心文件与运行时垃圾，隐藏备份核心系统文件，定期巡查完整性，发现损坏或被篡改时告警并从备份修复；守护权限只用于保护系统。System guard for DSH: classifies core system files and runtime junk, keeps a hidden backup of core files, patrols integrity, restores damaged files and asks for admin only to protect the system.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/*.js",
+    "scripts/*.ps1",
+    "scripts/*.mjs",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "CONTRACT.md",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "integrity.json"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.1-rc.1"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "system-guard",
+    "system-files",
+    "integrity",
+    "backup",
+    "windows"
+  ],
+  "author": "鲸進進",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/youchen-yc/dsh-system-guard.git"
+  },
+  "homepage": "https://gitee.com/youchen-yc/dsh-system-guard#readme",
+  "bugs": {
+    "url": "https://gitee.com/youchen-yc/dsh-system-guard/issues"
+  }
+}

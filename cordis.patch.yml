@@ -1,0 +1,4 @@
+- insert:
+    - id: system-guard
+      name: dsh-system-guard
+      config: {}
