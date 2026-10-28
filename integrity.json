@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sealedAt": "2026-10-28T14:27:42.338Z",
+  "sealedAt": "2026-10-28T16:41:01.999Z",
   "files": {
     "client.js": "23497e18222b14a2e0f1b29034d372c2f52286cebe420ec0fc14c066879099d7",
     "index.js": "9d07d2612ead1a7006d8b940fe1cb2d4eceeb2dc9a277f987dfac1e2aa3008e8",
@@ -10,13 +10,12 @@
     "lib/httpapi.js": "86053439c3d0ed105c50d670494c021c370dd9f60c0e5321f0341d81cfe5f991",
     "lib/patrol.js": "9affc9191d592a37e82327fdd391659affb5f6140cccb0c0c920d0b7337fc60d",
     "lib/posix-backend.js": "e982dc7a378406f13aacb5f969ee373122fb17ccd9ec6d688010d9bb52af8e41",
-    "lib/privilege.js": "8037c85a81cbbcc0c2daf964c1201adc0a8039ac846e12ca511b0070cf704cef",
+    "lib/privilege.js": "7fa7ccf91753cecc89912b3b9c9155fb9bda1561321f76a6e19dc9fb86c09ab4",
     "lib/ps.js": "b5cbec17c9960b779679e898d16e57bfb65b149c7e5db76c63b3e162777c5f09",
     "lib/win-backend.js": "a2c7e82fa2e9de61e2abf8c0aa9a75fbb8f249e4c36209c62c791173976a2e59",
     "locale/en.json": "f8a2dd0d816208e9de51f200e2705e71d976276b7df3edcd80632fb77fb5fdce",
     "locale/zh.json": "4f5908e12533a5852e9ca71d72d238b142d89a6a251236a3fa126e609cfeb90e",
-    "package.json": "fd1bcf491ea10d4928fcb1d8f9d8ebc976e70380e6dd6d802d31f638e400e0cf",
-    "sbom.cdx.json": "9301b68b7625d7f02f9405d6bebc36d3d2b503847219090bd7eb2630e4d11f46",
+    "package.json": "3f67ca17c0a5be82054244093eecb7605fe90cd613c5fa9463c37bc6f8725add",
     "scripts/build-sbom.mjs": "41392cbea99abecc3a39e7de64221b7a03cd3d0874c91bb56048ffd36019bada",
     "scripts/check-distributable.mjs": "1c9dccf589b3f1a48cdd3d7c3495ca96784cdb4f5c1a819de21532d689122785",
     "scripts/guard.ps1": "e646467f883d8ce0508c35a353f44b26ed0a20ff917f8f1d34233473a6907be1",

@@ -3,18 +3,18 @@
   "specVersion": "1.5",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-28T14:27:42.512Z",
+    "timestamp": "2026-10-28T16:41:02.292Z",
     "tools": [
       {
         "vendor": "dsh-system-guard",
         "name": "build-sbom",
-        "version": "1.0.1"
+        "version": "1.0.2"
       }
     ],
     "component": {
       "type": "application",
       "name": "dsh-system-guard",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "description": "系统守护：分析并分类系统核心文件与运行时垃圾，隐藏备份核心系统文件，定期巡查完整性，发现损坏或被篡改时告警并从备份修复；守护权限只用于保护系统。System guard for DSH: classifies core system files and runtime junk, keeps a hidden backup of core files, patrols integrity, restores damaged files and asks for admin only to protect the system.",
       "licenses": [
         {
@@ -34,7 +34,7 @@
   "components": [],
   "dependencies": [
     {
-      "ref": "dsh-system-guard@1.0.1",
+      "ref": "dsh-system-guard@1.0.2",
       "dependsOn": []
     }
   ],
@@ -45,7 +45,7 @@
     },
     {
       "name": "file:CHANGELOG.md",
-      "value": "cf854eb2c9abf0b5b7f4c5698603e940b93defb28be8a221de70669d554d3532"
+      "value": "1ffa4d80659644eedaea0b106248eb1c182cae2b6b4b1066ab690472b365e546"
     },
     {
       "name": "file:CONTRACT.md",
@@ -53,7 +53,7 @@
     },
     {
       "name": "file:README.md",
-      "value": "667d080f0fed022938f20e6e2d038190ebbadd1e6ff98ca1b318a6ac6e14ee8b"
+      "value": "5e73df00caf920435d7f5221e7b03298fdc0900e5063dcf86f310722b8489568"
     },
     {
       "name": "file:SECURITY.md",
@@ -77,7 +77,7 @@
     },
     {
       "name": "file:integrity.json",
-      "value": "86feb85ecdc948a542f7b5c150d45c2fb0122920f7e1466fc6b0ba84c94f3d75"
+      "value": "2b643c82d9a5d33ca1e664bfc44c116daa32a4a773d0bca78b35b2cdddbebeca"
     },
     {
       "name": "file:lib/calibrate.js",
@@ -105,7 +105,7 @@
     },
     {
       "name": "file:lib/privilege.js",
-      "value": "8037c85a81cbbcc0c2daf964c1201adc0a8039ac846e12ca511b0070cf704cef"
+      "value": "7fa7ccf91753cecc89912b3b9c9155fb9bda1561321f76a6e19dc9fb86c09ab4"
     },
     {
       "name": "file:lib/ps.js",
@@ -129,7 +129,7 @@
     },
     {
       "name": "file:package.json",
-      "value": "fd1bcf491ea10d4928fcb1d8f9d8ebc976e70380e6dd6d802d31f638e400e0cf"
+      "value": "3f67ca17c0a5be82054244093eecb7605fe90cd613c5fa9463c37bc6f8725add"
     },
     {
       "name": "file:scripts/build-sbom.mjs",
