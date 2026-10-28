@@ -1,0 +1,155 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-28T13:28:23.886Z",
+    "tools": [
+      {
+        "vendor": "dsh-system-guard",
+        "name": "build-sbom",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "dsh-system-guard",
+      "version": "1.0.0",
+      "description": "系统守护：分析并分类系统核心文件与运行时垃圾，隐藏备份核心系统文件，定期巡查完整性，发现损坏或被篡改时告警并从备份修复；守护权限只用于保护系统。System guard for DSH: classifies core system files and runtime junk, keeps a hidden backup of core files, patrols integrity, restores damaged files and asks for admin only to protect the system.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/youchen-yc/dsh-system-guard.git"
+        }
+      ]
+    }
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "dsh-system-guard@1.0.0",
+      "dependsOn": []
+    }
+  ],
+  "properties": [
+    {
+      "name": "file:.github/workflows/security.yml",
+      "value": "28324d5ada9bccec176b62ba596dbc6b1ac949d45b8567e124f7cc31fb00c055"
+    },
+    {
+      "name": "file:CHANGELOG.md",
+      "value": "dfd41ac5c30d442172dff9a13c9c84af0d365ca0fd4add9c6663fa5cf49e4f28"
+    },
+    {
+      "name": "file:CONTRACT.md",
+      "value": "1bdd5050e7b1b8ce6fdb9989fff551101e75c4ca862a957356d96099d57e65bc"
+    },
+    {
+      "name": "file:README.md",
+      "value": "667d080f0fed022938f20e6e2d038190ebbadd1e6ff98ca1b318a6ac6e14ee8b"
+    },
+    {
+      "name": "file:SECURITY.md",
+      "value": "2bfee1eb5e8a5c17720172c2bc95b580dde96fb0f2d5c6a6c495be5f62a6bb0d"
+    },
+    {
+      "name": "file:client.js",
+      "value": "23497e18222b14a2e0f1b29034d372c2f52286cebe420ec0fc14c066879099d7"
+    },
+    {
+      "name": "file:cordis.patch.yml",
+      "value": "4b408792ebc79c1a5b2be77c2e99819ed436ee21eabda8b7fd432ffceb27bb86"
+    },
+    {
+      "name": "file:icon.svg",
+      "value": "49d60d7771f717e1297b95df200a346b2eb74890c4a617920584888d39852824"
+    },
+    {
+      "name": "file:index.js",
+      "value": "9d07d2612ead1a7006d8b940fe1cb2d4eceeb2dc9a277f987dfac1e2aa3008e8"
+    },
+    {
+      "name": "file:integrity.json",
+      "value": "49be20d15ba5c556d1e6fc90d8aa901553dfdd0dd7d474a11d06894bd1f7e6f8"
+    },
+    {
+      "name": "file:lib/calibrate.js",
+      "value": "a85ab816b5a381948a4bdff1f8074edda6cac11dcf25093c27e5745a70c188f1"
+    },
+    {
+      "name": "file:lib/config.js",
+      "value": "ba1e3ded8e66ccc66d2d09e718926dd4d60869c1596d78e982628fe44b65eab0"
+    },
+    {
+      "name": "file:lib/core.js",
+      "value": "fe095a05a3eb7ee2bbe3b3ba6992552934e23efda1e34ace7e82b99d562f9b9d"
+    },
+    {
+      "name": "file:lib/httpapi.js",
+      "value": "86053439c3d0ed105c50d670494c021c370dd9f60c0e5321f0341d81cfe5f991"
+    },
+    {
+      "name": "file:lib/patrol.js",
+      "value": "9affc9191d592a37e82327fdd391659affb5f6140cccb0c0c920d0b7337fc60d"
+    },
+    {
+      "name": "file:lib/posix-backend.js",
+      "value": "e982dc7a378406f13aacb5f969ee373122fb17ccd9ec6d688010d9bb52af8e41"
+    },
+    {
+      "name": "file:lib/privilege.js",
+      "value": "8037c85a81cbbcc0c2daf964c1201adc0a8039ac846e12ca511b0070cf704cef"
+    },
+    {
+      "name": "file:lib/ps.js",
+      "value": "b5cbec17c9960b779679e898d16e57bfb65b149c7e5db76c63b3e162777c5f09"
+    },
+    {
+      "name": "file:lib/win-backend.js",
+      "value": "a2c7e82fa2e9de61e2abf8c0aa9a75fbb8f249e4c36209c62c791173976a2e59"
+    },
+    {
+      "name": "file:locale/en.json",
+      "value": "f8a2dd0d816208e9de51f200e2705e71d976276b7df3edcd80632fb77fb5fdce"
+    },
+    {
+      "name": "file:locale/zh.json",
+      "value": "4f5908e12533a5852e9ca71d72d238b142d89a6a251236a3fa126e609cfeb90e"
+    },
+    {
+      "name": "file:market/youchen-yc__dsh-system-guard.yml",
+      "value": "2f76a5045eeddcf8f929eff1f35d1f50320b0add558927151db37549c0da7fb4"
+    },
+    {
+      "name": "file:package.json",
+      "value": "ac150e6877a004a55c17a7e98afd0baf6827ac3837dc03c8718f2ceca60c14e3"
+    },
+    {
+      "name": "file:scripts/build-sbom.mjs",
+      "value": "41392cbea99abecc3a39e7de64221b7a03cd3d0874c91bb56048ffd36019bada"
+    },
+    {
+      "name": "file:scripts/check-distributable.mjs",
+      "value": "1c9dccf589b3f1a48cdd3d7c3495ca96784cdb4f5c1a819de21532d689122785"
+    },
+    {
+      "name": "file:scripts/guard.ps1",
+      "value": "e646467f883d8ce0508c35a353f44b26ed0a20ff917f8f1d34233473a6907be1"
+    },
+    {
+      "name": "file:scripts/seal.mjs",
+      "value": "c8570e9050ee94be312d50edacffca0d1196748cdbb4faff5dfd135813849c5b"
+    },
+    {
+      "name": "file:scripts/sign-release.mjs",
+      "value": "a91c07ee45bf4c47a2230a47a6c3a124c681bb8998f5cfdcb730d8db1ca871fb"
+    }
+  ]
+}

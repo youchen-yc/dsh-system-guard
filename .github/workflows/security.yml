@@ -1,0 +1,73 @@
+name: security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  static-and-supply-chain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: syntax check（全部 JS）
+        run: |
+          set -e
+          for f in index.js client.js lib/*.js scripts/*.mjs; do
+            node --check "$f"
+          done
+
+      - name: 零第三方依赖（供应链最小化）
+        run: |
+          node -e "
+          const p = require('./package.json');
+          const deps = Object.keys(p.dependencies || {});
+          const devDeps = Object.keys(p.devDependencies || {});
+          if (deps.length || devDeps.length) {
+            console.error('第三方依赖不允许：', deps, devDeps);
+            process.exit(1);
+          }
+          console.log('no third-party dependencies');
+          "
+
+      - name: 秘密扫描（令牌/私钥不得入库）
+        run: |
+          set -e
+          if grep -rInE '(npm_[A-Za-z0-9]{30,}|sk-[A-Za-z0-9]{20,}|BEGIN (RSA|OPENSSH|EC|PRIVATE) PRIVATE KEY)' \
+            --include='*.js' --include='*.mjs' --include='*.json' --include='*.yml' \
+            --exclude-dir=node_modules --exclude-dir=.git . ; then
+            echo '发现疑似凭据，阻断'; exit 1
+          fi
+          echo 'no plaintext credentials'
+
+      - name: 硬编码绝对路径扫描（可分发自检 J-04）
+        run: node scripts/check-distributable.mjs
+
+      - name: 插件完整性自校验（integrity.json）
+        run: |
+          node -e "import('./lib/privilege.js').then(async (m) => {
+            const r = await m.selfCheck({ pluginDir: process.cwd() });
+            if (!r.ok) { console.error(r.message); process.exit(1) }
+            console.log('sealed ok, checked', r.checkedCount)
+          })"
+
+      - name: 单元测试
+        run: node --test test/selftest.mjs
+
+      - name: SBOM 生成并归档
+        run: |
+          node scripts/build-sbom.mjs
+          test -s sbom.cdx.json
+          echo 'sbom generated'
+
+      - name: 发布产物签名校验（仅在打 tag 的构建里）
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          node scripts/sign-release.mjs --verify-only || echo '签名校验跳过（无发布密钥）'

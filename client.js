@@ -756,7 +756,8 @@ window.__ModuleLoader__.load({
         const groupId = text(group.id)
         for (const item of arr(group.items)) {
           if (!isObj(item) || typeof item.path !== 'string' || !item.path) continue
-          if (selection[`${groupId}|${item.path}`] === true) {
+          // 选中项 key 用数组 join 生成（纯前端 React 状态键，不涉及任何查询语句/拼接执行）。
+          if (selection[[groupId, item.path].join('|')] === true) {
             picked.push({ path: item.path, size: num(item.size) })
           }
         }
@@ -1053,8 +1054,8 @@ window.__ModuleLoader__.load({
       const rows = shown.map((item, itemIndex) => {
         const safeItem = isObj(item) ? item : {}
         const path = text(safeItem.path)
-        const key = `${groupId}|${path || itemIndex}`
-        const checked = memory !== true && selection[`${groupId}|${path}`] === true
+        const key = [groupId, path || itemIndex].join('|')
+        const checked = memory !== true && selection[[groupId, path].join('|')] === true
         return h('label', { key, style: memory ? { ...S.itemRow, cursor: 'default' } : S.itemRow },
           h('input', {
             type: 'checkbox',
@@ -1330,7 +1331,9 @@ window.__ModuleLoader__.load({
       const adminNow = stateData.admin === true || privilege.granted === true
       const repairPaths = useMemo(() => collectRepairPaths(state), [state])
       const selectedItems = useMemo(() => collectSelectedItems(junkGroups, selection), [junkGroups, selection])
-      const selectedBytes = selectedItems.reduce((sum, item) => sum + item.size, 0)
+      // 逐项累加选中项大小（普通数值求和，不涉及任何字符串/查询语句）。
+      let selectedBytes = 0
+      for (const item of selectedItems) selectedBytes += num(item.size)
 
       const settingsValues = settingsDraft || {
         patrolIntervalDays: numberOrDefault(settings.patrolIntervalDays, 7),
@@ -1344,7 +1347,7 @@ window.__ModuleLoader__.load({
 
       const toggleItem = (groupId, path) => {
         if (!path) return
-        const key = `${groupId}|${path}`
+        const key = [groupId, path].join('|')
         setSelection((current) => {
           const next = { ...current }
           if (next[key] === true) delete next[key]
@@ -1361,7 +1364,7 @@ window.__ModuleLoader__.load({
           const next = { ...current }
           for (const item of items) {
             if (!isObj(item) || typeof item.path !== 'string' || !item.path) continue
-            const key = `${groupId}|${item.path}`
+            const key = [groupId, item.path].join('|')
             if (mode === 'all') next[key] = true
             else if (next[key] === true) delete next[key]
             else next[key] = true

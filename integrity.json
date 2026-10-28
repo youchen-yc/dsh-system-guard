@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "sealedAt": "2026-10-27T14:35:13.459Z",
+  "sealedAt": "2026-10-28T13:28:23.747Z",
   "files": {
-    "client.js": "583ac833ef1af7dad81d16de3dbd36bf110297f3363b0b21176cc305947c010e",
+    "client.js": "23497e18222b14a2e0f1b29034d372c2f52286cebe420ec0fc14c066879099d7",
     "index.js": "9d07d2612ead1a7006d8b940fe1cb2d4eceeb2dc9a277f987dfac1e2aa3008e8",
     "lib/calibrate.js": "a85ab816b5a381948a4bdff1f8074edda6cac11dcf25093c27e5745a70c188f1",
     "lib/config.js": "ba1e3ded8e66ccc66d2d09e718926dd4d60869c1596d78e982628fe44b65eab0",
@@ -11,12 +11,16 @@
     "lib/patrol.js": "9affc9191d592a37e82327fdd391659affb5f6140cccb0c0c920d0b7337fc60d",
     "lib/posix-backend.js": "e982dc7a378406f13aacb5f969ee373122fb17ccd9ec6d688010d9bb52af8e41",
     "lib/privilege.js": "8037c85a81cbbcc0c2daf964c1201adc0a8039ac846e12ca511b0070cf704cef",
-    "lib/ps.js": "7ae4adda9a220600221938c4f870d718540f685687ca5ef571e1aa36809c38a3",
+    "lib/ps.js": "b5cbec17c9960b779679e898d16e57bfb65b149c7e5db76c63b3e162777c5f09",
     "lib/win-backend.js": "a2c7e82fa2e9de61e2abf8c0aa9a75fbb8f249e4c36209c62c791173976a2e59",
     "locale/en.json": "f8a2dd0d816208e9de51f200e2705e71d976276b7df3edcd80632fb77fb5fdce",
     "locale/zh.json": "4f5908e12533a5852e9ca71d72d238b142d89a6a251236a3fa126e609cfeb90e",
-    "package.json": "73d526ed3cd2718dab7fb21c675a6bf2ef09bab2606ecb889a78f006326df40c",
+    "package.json": "ac150e6877a004a55c17a7e98afd0baf6827ac3837dc03c8718f2ceca60c14e3",
+    "sbom.cdx.json": "6d535598f08c57322cfa873310476a07a7382a60c851b720edfce500a40b0f8d",
+    "scripts/build-sbom.mjs": "41392cbea99abecc3a39e7de64221b7a03cd3d0874c91bb56048ffd36019bada",
+    "scripts/check-distributable.mjs": "1c9dccf589b3f1a48cdd3d7c3495ca96784cdb4f5c1a819de21532d689122785",
     "scripts/guard.ps1": "e646467f883d8ce0508c35a353f44b26ed0a20ff917f8f1d34233473a6907be1",
-    "scripts/seal.mjs": "c8570e9050ee94be312d50edacffca0d1196748cdbb4faff5dfd135813849c5b"
+    "scripts/seal.mjs": "c8570e9050ee94be312d50edacffca0d1196748cdbb4faff5dfd135813849c5b",
+    "scripts/sign-release.mjs": "a91c07ee45bf4c47a2230a47a6c3a124c681bb8998f5cfdcb730d8db1ca871fb"
   }
 }

@@ -21,6 +21,9 @@
     "CONTRACT.md",
     "README.md",
     "CHANGELOG.md",
+    "SECURITY.md",
+    "sbom.cdx.json",
+    "keys/*.pub",
     "LICENSE",
     "integrity.json"
   ],
