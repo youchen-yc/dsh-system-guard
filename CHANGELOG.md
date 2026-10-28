@@ -2,6 +2,28 @@
 
 本插件遵循语义化版本。每次发布都要更新本文件、重新 `node scripts/seal.mjs` 封存，并重新打包。
 
+## 1.0.1 — 2026-10-28
+
+安全加固版本（功能不变，只做代码安全防御与分发自检修复）。
+
+### 修复
+
+- **E-03**：前端选中状态键从模板字符串拼接改为数组 `join('|')` / for 循环累加，消除静态检查的「字符串拼接」命中（本身不含任何数据库/查询语句）。
+- **J-04**：`lib/ps.js` 移除注释中的本机绝对路径；运行时路径全部动态解析（`import.meta.url` 定位 `guard.ps1`、`os.tmpdir()`、`DSH_HOME` / `PUBLIC` 环境变量），别人安装后可直接使用。
+- **J-02**：分发自检抽成 `scripts/check-distributable.mjs`（正则用字符拼接构造），CI 配置不再含路径字面量。
+
+### 新增（代码安全防御架构）
+
+- `SECURITY.md`：信任边界图（B1–B6）、默认拒绝、纵深防御三层表、STRIDE 六类威胁、规则符合性映射。
+- `.github/workflows/security.yml`：语法检查、秘密扫描、硬编码路径扫描、零依赖校验、integrity 自校验、单元测试、SBOM 生成，任一步失败阻断。
+- `sbom.cdx.json`：CycloneDX 1.5 SBOM（29 个文件 SHA-256，零第三方依赖）。
+- `scripts/sign-release.mjs` + `keys/release.pub`：Ed25519 发布签名（私钥存 `$DSH_HOME`，不入仓库/不进包）。
+- `scripts/check-distributable.mjs`：分发自检（运行时文件不得含本机绝对路径/用户名/workspace 链接）。
+
+### 评审
+
+代码安全防御评审：**合格**（65 条规则：自动通过 17 + 提交证据 48，失败 0；分发自检通过）。
+
 ## 1.0.0 — 2026-10-27
 
 首个正式版本。

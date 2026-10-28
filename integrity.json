@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sealedAt": "2026-10-28T13:28:23.747Z",
+  "sealedAt": "2026-10-28T14:27:42.338Z",
   "files": {
     "client.js": "23497e18222b14a2e0f1b29034d372c2f52286cebe420ec0fc14c066879099d7",
     "index.js": "9d07d2612ead1a7006d8b940fe1cb2d4eceeb2dc9a277f987dfac1e2aa3008e8",
@@ -15,8 +15,8 @@
     "lib/win-backend.js": "a2c7e82fa2e9de61e2abf8c0aa9a75fbb8f249e4c36209c62c791173976a2e59",
     "locale/en.json": "f8a2dd0d816208e9de51f200e2705e71d976276b7df3edcd80632fb77fb5fdce",
     "locale/zh.json": "4f5908e12533a5852e9ca71d72d238b142d89a6a251236a3fa126e609cfeb90e",
-    "package.json": "ac150e6877a004a55c17a7e98afd0baf6827ac3837dc03c8718f2ceca60c14e3",
-    "sbom.cdx.json": "6d535598f08c57322cfa873310476a07a7382a60c851b720edfce500a40b0f8d",
+    "package.json": "fd1bcf491ea10d4928fcb1d8f9d8ebc976e70380e6dd6d802d31f638e400e0cf",
+    "sbom.cdx.json": "9301b68b7625d7f02f9405d6bebc36d3d2b503847219090bd7eb2630e4d11f46",
     "scripts/build-sbom.mjs": "41392cbea99abecc3a39e7de64221b7a03cd3d0874c91bb56048ffd36019bada",
     "scripts/check-distributable.mjs": "1c9dccf589b3f1a48cdd3d7c3495ca96784cdb4f5c1a819de21532d689122785",
     "scripts/guard.ps1": "e646467f883d8ce0508c35a353f44b26ed0a20ff917f8f1d34233473a6907be1",

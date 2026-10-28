@@ -3,18 +3,18 @@
   "specVersion": "1.5",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-28T13:28:23.886Z",
+    "timestamp": "2026-10-28T14:27:42.512Z",
     "tools": [
       {
         "vendor": "dsh-system-guard",
         "name": "build-sbom",
-        "version": "1.0.0"
+        "version": "1.0.1"
       }
     ],
     "component": {
       "type": "application",
       "name": "dsh-system-guard",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "description": "系统守护：分析并分类系统核心文件与运行时垃圾，隐藏备份核心系统文件，定期巡查完整性，发现损坏或被篡改时告警并从备份修复；守护权限只用于保护系统。System guard for DSH: classifies core system files and runtime junk, keeps a hidden backup of core files, patrols integrity, restores damaged files and asks for admin only to protect the system.",
       "licenses": [
         {
@@ -34,7 +34,7 @@
   "components": [],
   "dependencies": [
     {
-      "ref": "dsh-system-guard@1.0.0",
+      "ref": "dsh-system-guard@1.0.1",
       "dependsOn": []
     }
   ],
@@ -45,7 +45,7 @@
     },
     {
       "name": "file:CHANGELOG.md",
-      "value": "dfd41ac5c30d442172dff9a13c9c84af0d365ca0fd4add9c6663fa5cf49e4f28"
+      "value": "cf854eb2c9abf0b5b7f4c5698603e940b93defb28be8a221de70669d554d3532"
     },
     {
       "name": "file:CONTRACT.md",
@@ -77,7 +77,7 @@
     },
     {
       "name": "file:integrity.json",
-      "value": "49be20d15ba5c556d1e6fc90d8aa901553dfdd0dd7d474a11d06894bd1f7e6f8"
+      "value": "86feb85ecdc948a542f7b5c150d45c2fb0122920f7e1466fc6b0ba84c94f3d75"
     },
     {
       "name": "file:lib/calibrate.js",
@@ -129,7 +129,7 @@
     },
     {
       "name": "file:package.json",
-      "value": "ac150e6877a004a55c17a7e98afd0baf6827ac3837dc03c8718f2ceca60c14e3"
+      "value": "fd1bcf491ea10d4928fcb1d8f9d8ebc976e70380e6dd6d802d31f638e400e0cf"
     },
     {
       "name": "file:scripts/build-sbom.mjs",
